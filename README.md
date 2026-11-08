@@ -1,153 +1,70 @@
-# TrendPulse – YouTube Trending Video Data Analysis
+# Part 4 – SQL & Spreadsheet Analysis
 
-## Project Overview
+## Project: TrendPulse – YouTube Trending Video Analysis
 
-TrendPulse is a Python-based data analysis project that explores trending video datasets from the United States (US), Great Britain (GB), and India (IN).
+### 1. Project Overview
+This project uses SQL and Microsoft Excel to explore YouTube trending video data. The objective is to organize the data, perform database queries, summarize trends, and present insights through spreadsheet analysis.
 
-The project is divided into three parts, covering Python fundamentals, data manipulation, statistical analysis, exploratory data analysis, and data visualization.
+**Note:** The dataset used in this educational project is synthetic reference data.
 
-**Dataset Disclaimer:** The supplied datasets are synthetic educational reference data. The findings represent only these datasets and should not be interpreted as actual YouTube platform-wide statistics.
+### 2. Dataset Overview
 
-## Project Objectives
+The database contains three tables:
 
-- Understand and process trending video datasets.
-- Apply Python programming fundamentals.
-- Perform data cleaning and preprocessing.
-- Analyse video views and engagement metrics.
-- Identify patterns using statistical methods.
-- Create meaningful static and interactive visualizations.
-- Compare video performance across countries and categories.
-
-## Project Structure
-
-```text
-TrendPulse/
-│
-├── part1_python_foundations/
-│   ├── Part1_Python_Foundations.ipynb
-│   ├── data/
-│   └── README.md
-│
-├── part2_numpy_pandas/
-│   ├── Part2_NumPy_Pandas.ipynb
-│   ├── data/
-│   └── README.md
-│
-├── part3_visualization_eda/
-│   ├── Part3_Data_Visualization_EDA_Final.ipynb
-│   ├── data/
-│   └── README.md
-│
-├── README.md
-└── requirements.txt
-```
-
-## Project Modules
-
-### Part 1 – Python Foundations
-
-**Topics Covered:**
-- Python data types and variables
-- Lists, dictionaries, tuples, and sets
-- Loops and conditional statements
-- Functions and default arguments
-- Variable scope
-- String manipulation
-- Rule-based classification
-- Data cleaning fundamentals
-
-**Outcome:** Applied Python fundamentals to process and classify trending video records.
-
-### Part 2 – NumPy and Pandas
-
-**Topics Covered:**
-- NumPy arrays and numerical operations
-- Array manipulation and broadcasting
-- Pandas DataFrames
-- Data inspection and cleaning
-- Missing value handling
-- Duplicate removal
-- Filtering and sorting
-- GroupBy and aggregation
-- Country-wise and category-wise analysis
-- Time-to-trend and video lifespan analysis
-
-**Outcome:** Used NumPy and Pandas to clean, manipulate, and analyse the combined video dataset.
-
-### Part 3 – Data Visualization and Exploratory Data Analysis
-
-**Topics Covered:**
-- Descriptive statistics
-- Mean, median, and mode
-- Outlier detection using IQR
-- Correlation analysis
-- Matplotlib visualizations
-- Interactive Plotly charts
-- Engagement funnel
-- Retention analysis
-- Country and category comparisons
-- Publication-month cohort analysis
-
-**Outcome:** Identified patterns and relationships in the supplied datasets through statistical analysis and visualizations.
-
-## Dataset Information
-
-The project uses four CSV files:
-
-| Dataset | Description |
+| Table | Description |
 |---|---|
-| USvideos.csv | United States video records |
-| GBvideos.csv | Great Britain video records |
-| INvideos.csv | India video records |
-| categories.csv | Video category information |
+| categories | Stores video category details |
+| videos | Stores video titles, channels, categories and publish dates |
+| trending_records | Stores country-wise trending dates, views, likes, dislikes and comments |
 
-### Initial Dataset Summary
+**Database verification:**
+- Categories: 17
+- Videos: 14,699
+- Trending records: 46,000
 
-| Country | Records |
-|---|---:|
-| US | 16,080 |
-| GB | 15,075 |
-| IN | 15,075 |
-| **Total** | **46,230** |
+### 3. SQL Operations
 
-After duplicate removal, the combined cleaned dataset contained 46,000 records.
+The project demonstrates the following SQL concepts:
 
-## Technologies Used
+1. SELECT with WHERE – Filters records based on a condition.
+2. ORDER BY – Sorts records.
+3. DISTINCT – Retrieves unique country values.
+4. GROUP BY – Calculates average views by country.
+5. HAVING – Filters grouped results.
+6. INNER JOIN – Combines matching video and category records.
+7. LEFT JOIN – Displays all categories and their matching videos.
+8. RIGHT JOIN – Combines video and trending record information.
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Plotly
-- Google Colab
-- GitHub
+All eight queries were successfully executed in MySQL Workbench.
 
-## How to Run the Project
+### 4. Spreadsheet Analysis
 
-1. Open the required Jupyter Notebook from the corresponding project folder.
-2. Open the notebook in Google Colab.
-3. Upload the required CSV files when prompted.
-4. Run the notebook cells in sequence.
-5. Review the outputs, statistical results, and visualizations.
+The Excel workbook `Part4_Analysis.xlsx` includes:
 
-## Key Project Outcomes
+- Dashboard with key metrics
+- Raw data tables
+- Country-wise summary
+- Category and country summary
+- Lookup demonstrations using XLOOKUP and VLOOKUP
+- Formula examples using COUNTIF, SUM and AVERAGE
+- Conditional formatting
+- Named ranges
 
-- Processed and cleaned 46,230 initial records.
-- Removed 230 duplicate records.
-- Analysed views, likes, dislikes, and comments.
-- Identified high-view outliers using IQR.
-- Examined relationships between video engagement metrics.
-- Compared average views across countries and categories.
-- Created static and interactive visualizations.
-- Explored observed trending-span retention and publication-month cohorts.
+### 5. Tools Used
 
-## Conclusion
+- MySQL Workbench
+- Microsoft Excel
+- SQL
+- CSV datasets
 
-TrendPulse demonstrates the practical application of Python programming, data manipulation, statistical analysis, and data visualization.
+### 6. Project Files
 
-The three project parts provide a structured learning journey from Python fundamentals to exploratory data analysis, helping identify patterns and communicate insights from the supplied trending video datasets.
+- `Part4_Create_Schema.sql` – Creates the database and tables.
+- `Part4_Import_Data.sql` – Imports the dataset.
+- `Part4_Queries.sql` – Contains the eight SQL queries.
+- `Part4_Analysis.xlsx` – Spreadsheet analysis and dashboard.
+- `Part4_Database_Tables/` – CSV source tables.
 
-**Project Status: Parts 1, 2, and 3 completed.**
+### 7. Conclusion
 
-**Important:** All findings are based on synthetic educational reference datasets and should not be interpreted as actual YouTube platform-wide statistics.
+This project demonstrates how SQL and spreadsheet tools can be used together to organize, query, summarize and visualize trending video data. It provides practical experience with database operations, joins, aggregation, Excel formulas and dashboard creation.
