@@ -1,70 +1,54 @@
-# Part 4 – SQL & Spreadsheet Analysis
+# TrendPulse – YouTube Trending Video Analysis
 
-## Project: TrendPulse – YouTube Trending Video Analysis
+## Project Overview
 
-### 1. Project Overview
-This project uses SQL and Microsoft Excel to explore YouTube trending video data. The objective is to organize the data, perform database queries, summarize trends, and present insights through spreadsheet analysis.
+TrendPulse is a data analysis project that explores YouTube trending video records using Python, NumPy, Pandas, Data Visualization, SQL and Microsoft Excel.
 
-**Note:** The dataset used in this educational project is synthetic reference data.
+The project is divided into four independently organized parts.
 
-### 2. Dataset Overview
+## Project Structure
 
-The database contains three tables:
-
-| Table | Description |
+| Part | Description |
 |---|---|
-| categories | Stores video category details |
-| videos | Stores video titles, channels, categories and publish dates |
-| trending_records | Stores country-wise trending dates, views, likes, dislikes and comments |
+| Part 1 | Python Foundations |
+| Part 2 | NumPy and Pandas |
+| Part 3 | Data Visualization and Exploratory Data Analysis |
+| Part 4 | SQL and Spreadsheet Analysis |
 
-**Database verification:**
-- Categories: 17
-- Videos: 14,699
-- Trending records: 46,000
+## Project Folders
 
-### 3. SQL Operations
+- [Part 1 – Python Foundations](./part1_python_foundations/)
+- [Part 2 – NumPy and Pandas](./part2_numpy_pandas/)
+- [Part 3 – Data Visualization and EDA](./part3_visualization_eda/)
+- [Part 4 – SQL and Spreadsheet Analysis](./part4_sql_spreadsheet/)
 
-The project demonstrates the following SQL concepts:
+## Tools and Technologies
 
-1. SELECT with WHERE – Filters records based on a condition.
-2. ORDER BY – Sorts records.
-3. DISTINCT – Retrieves unique country values.
-4. GROUP BY – Calculates average views by country.
-5. HAVING – Filters grouped results.
-6. INNER JOIN – Combines matching video and category records.
-7. LEFT JOIN – Displays all categories and their matching videos.
-8. RIGHT JOIN – Combines video and trending record information.
-
-All eight queries were successfully executed in MySQL Workbench.
-
-### 4. Spreadsheet Analysis
-
-The Excel workbook `Part4_Analysis.xlsx` includes:
-
-- Dashboard with key metrics
-- Raw data tables
-- Country-wise summary
-- Category and country summary
-- Lookup demonstrations using XLOOKUP and VLOOKUP
-- Formula examples using COUNTIF, SUM and AVERAGE
-- Conditional formatting
-- Named ranges
-
-### 5. Tools Used
-
-- MySQL Workbench
+- Python
+- Google Colab
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Plotly
+- MySQL
 - Microsoft Excel
-- SQL
-- CSV datasets
+- Git and GitHub
 
-### 6. Project Files
+## Dataset Information
 
-- `Part4_Create_Schema.sql` – Creates the database and tables.
-- `Part4_Import_Data.sql` – Imports the dataset.
-- `Part4_Queries.sql` – Contains the eight SQL queries.
-- `Part4_Analysis.xlsx` – Spreadsheet analysis and dashboard.
-- `Part4_Database_Tables/` – CSV source tables.
+Parts 1–3 use YouTube trending video datasets for the US, GB and India, along with category information. Part 4 uses synthetic reference data for SQL and spreadsheet practice.
 
-### 7. Conclusion
+The datasets are used for educational analysis and are not claimed as original data created by the project author. Refer to the individual part README files for dataset details and documentation.
 
-This project demonstrates how SQL and spreadsheet tools can be used together to organize, query, summarize and visualize trending video data. It provides practical experience with database operations, joins, aggregation, Excel formulas and dashboard creation.
+## Project Objectives
+
+- Understand and manipulate datasets using Python.
+- Perform data analysis using NumPy and Pandas.
+- Visualize trends and discover meaningful patterns.
+- Perform SQL queries and database operations.
+- Summarize findings using Microsoft Excel.
+
+## Submission
+
+This repository contains all four parts of the TrendPulse project, including notebooks, datasets, SQL scripts, spreadsheet analysis and documentation.
